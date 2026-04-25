@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Order</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="logo.png">
+    </a>
+    <span>Saji Batavia</span>
+  </div>
+
+  <div class="menu">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="order.html">Order</a>
+  </div>
+</div>
+
+<section class="order-section">
+  <h2 class="slide-left">Order Sekarang</h2>
+  <p class="slide-right">Isi form di bawah untuk melakukan pemesanan</p>
+
+  <!-- FORM -->
+  <div class="form-container zoom-in">
+    <iframe 
+      src="https://forms.gle/ganzfqHdPUGuJMfq7"
+      width="100%" 
+      height="500" 
+      frameborder="0">
+    </iframe>
+  </div>
+
+  <!-- WA -->
+  <div class="order-extra fade-up">
+    <p>Atau pesan langsung via WhatsApp</p>
+    <a href="https://wa.me/6281234567890" class="btn bounce">
+      Chat WhatsApp
+    </a>
+  </div>
+</section>
+
+<script>
+const fades = document.querySelectorAll('.fade');
+
+function showOnScroll() {
+  fades.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 50) {
+      el.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', showOnScroll);
+window.addEventListener('load', showOnScroll);
+</script>
+
+<script>
+const elements = document.querySelectorAll('.slide-left, .slide-right, .zoom-in, .fade-up');
+
+function showOnScroll() {
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 50) {
+      el.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', showOnScroll);
+window.addEventListener('load', showOnScroll);
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

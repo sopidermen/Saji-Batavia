@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Saji Batavia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="logo.png" alt="Logo">
+    </a>
+    <span>Saji Batavia</span>
+  </div>
+
+  <div class="menu">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="order.html">Order</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1 class="fade">PANCONG & ES GOYANG</h1>
+  <p class="fade">────Jajanan tradisional dengan rasa modern!────</p>
+</section>
+
+<section class="philosophy">
+  <h2 class="fade">Filosofi Kami</h2>
+
+  <!-- ITEM 1 -->
+  <div class="philo-row fade">
+    <img src="animasi1.gif" alt="Animasi">
+    <div class="text">
+      <h3>SAJI</h3>
+      <p>Kata “Saji” berasal dari bahasa Indonesia yang berarti menyajikan atau hidangan. Kata ini menggambarkan tujuan utama usaha/kelompok, yaitu menghadirkan makanan dan minuman kepada konsumen dengan cara yang menarik, berkualitas, dan penuh cita rasa.</p>
+    </div>
+  </div>
+
+  <!-- ITEM 2 (KEBALIK) -->
+  <div class="philo-row reverse fade">
+   <img src="animasi2.gif" alt="Animasi">
+    <div class="text">
+      <h3>BATAVIA</h3>
+      <p>“Batavia” merupakan nama lama dari kota Jakarta pada masa penjajahan. Penggunaan kata ini melambangkan identitas budaya Betawi sebagai warisan asli daerah tersebut, khususnya dalam bidang kuliner tradisional.
+Dengan menggabungkan kedua kata tersebut.</p>
+    </div>
+  </div>
+
+  <!-- ITEM 3 -->
+  <div class="philo-row fade">
+   <img src="animasi3.gif" alt="Animasi">
+    <div class="text">
+      <h3>SAJI BATAVIA</h3>
+      <p>“Saji Batavia” memiliki makna sebagai penyajian hidangan khas Betawi yang diangkat kembali dengan sentuhan modern. Nama ini juga mencerminkan upaya untuk melestarikan budaya lokal sekaligus menyesuaikannya dengan selera generasi masa kini.</p>
+    </div>
+  </div>
+
+</section>
+
+</section>
+
+<script>
+// ANIMASI SCROLL
+const fades = document.querySelectorAll('.fade');
+
+function showOnScroll() {
+  fades.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 50) {
+      el.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', showOnScroll);
+window.addEventListener('load', showOnScroll);
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

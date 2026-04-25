@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Product</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="logo.png">
+    </a>
+    <span>Saji Batavia</span>
+  </div>
+
+  <div class="menu">
+    <a href="index.html">Home</a>
+    <a href="Menu.html">Menu</a>
+    <a href="order.html">Order</a>
+  </div>
+</div>
+
+<section class="product-section">
+  <h2 class="fade">Menu Kami</h2>
+
+  <!-- PANCONG -->
+  <div class="product-row fade">
+    <img src="pancong.jpg">
+    <div class="text">
+      <h3>Pancong Betawi</h3>
+      <p>
+        Kue pancong lembut yang dibuat dengan campuran tepung, santan, dan kelapa parut, pancong memiliki aroma khas yang harum. Topping yang tersedia: Original (parutan kelapa), keju, dan kombo coklat keju.
+      </p>
+      <p class="price">Rp10.000 / 3pcs</p>
+    </div>
+  </div>
+
+  <!-- ES GOYANG -->
+  <div class="product-row reverse fade">
+    <img src="esgoyang.jpg">
+    <div class="text">
+      <h3>Es Goyang Coklat</h3>
+      <p>
+        Es goyang dengan celupan coklat, memiliki tekstur lembut yang perlahan mencair di mulut, menawarkan perpaduan rasa manis dan dingin yang mampu mengusir dahaga sekaligus memberikan kesegaran di tengah cuaca panas. Rasa yang tersedia: chocolate, strawberry, bubblegum, dan mangga.
+      </p>
+      <p class="price">Rp8.000</p>
+    </div>
+  </div>
+
+</section>
+
+<script>
+const fades = document.querySelectorAll('.fade');
+
+function showOnScroll() {
+  fades.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 50) {
+      el.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', showOnScroll);
+window.addEventListener('load', showOnScroll);
+</script>
+
+<script>
+const rows = document.querySelectorAll('.product-row');
+
+function showOnScroll() {
+  rows.forEach(row => {
+    const top = row.getBoundingClientRect().top;
+    if (top < window.innerHeight - 50) {
+      row.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', showOnScroll);
+window.addEventListener('load', showOnScroll);
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
